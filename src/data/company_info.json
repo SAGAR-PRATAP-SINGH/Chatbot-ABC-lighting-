@@ -1,0 +1,19 @@
+{
+  "company_name": "ABC Lighting Corp",
+  "locations": [
+    {
+      "address": "123 Solar Way, Brightville, CA 92101",
+      "phone": "(555) 123-4567"
+    },
+    {
+      "address": "456 Luminous Drive, Glowtown, NY 10001",
+      "phone": "(555) 987-6543"
+    }
+  ],
+  "business_hours": {
+    "weekdays": "8:00 AM - 6:00 PM EST",
+    "saturday": "9:00 AM - 3:00 PM EST",
+    "sunday": "Closed"
+  },
+  "company_description": "ABC Lighting Corp is a leading manufacturer of innovative solar-powered lighting solutions for residential and commercial applications."
+}

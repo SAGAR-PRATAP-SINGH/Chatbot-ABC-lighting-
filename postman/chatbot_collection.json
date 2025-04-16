@@ -1,0 +1,61 @@
+{
+  "info": {
+    "name": "ABC Lighting Chatbot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Chat Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"message\": \"{{message}}\",\n    \"conversationHistory\": {{conversationHistory}}\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/chat",
+          "host": ["{{baseUrl}}"],
+          "path": ["chat"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"Response has required fields\", function () {",
+              "    const responseData = pm.response.json();",
+              "    pm.expect(responseData).to.have.property('response');",
+              "    pm.expect(responseData).to.have.property('followUp');",
+              "});",
+              "",
+              "if (pm.response.code === 200) {",
+              "    const responseData = pm.response.json();",
+              "    pm.collectionVariables.set('conversationHistory', ",
+              "        JSON.stringify([...JSON.parse(pm.collectionVariables.get('conversationHistory') || '[]'), responseData])",
+              "    );",
+              "}"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

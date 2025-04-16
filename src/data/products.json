@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "SL-2000",
+      "name": "SolarMaster Pro Street Light",
+      "type": "street_light",
+      "specifications": {
+        "dimensions": "48\" x 24\" x 8\"",
+        "solar_panel": "100W Monocrystalline",
+        "battery": "48V 40Ah Lithium",
+        "runtime": "12-14 hours per full charge",
+        "brightness": "6000 lumens",
+        "mounting_height": "12-20 feet"
+      },
+      "price": 899.99,
+      "warranty": "5 years",
+      "image_path": "assets/street_light.jpg"
+    },
+    {
+      "id": "DL-500",
+      "name": "PathBrite Driveway Light",
+      "type": "driveway_light",
+      "specifications": {
+        "dimensions": "12\" x 8\" x 4\"",
+        "solar_panel": "20W Polycrystalline",
+        "battery": "12V 8Ah Lithium",
+        "runtime": "8-10 hours per full charge",
+        "brightness": "1200 lumens",
+        "mounting_height": "2-3 feet"
+      },
+      "price": 129.99,
+      "warranty": "2 years",
+      "image_path": "assets/driveway_light.jpg"
+    },
+    {
+      "id": "WL-100",
+      "name": "LumiWall Outdoor Sconce",
+      "type": "wall_light",
+      "specifications": {
+        "dimensions": "10\" x 6\" x 4\"",
+        "solar_panel": "15W Monocrystalline",
+        "battery": "7.4V 4Ah Lithium",
+        "runtime": "6-8 hours per full charge",
+        "brightness": "800 lumens",
+        "mounting_height": "6-8 feet"
+      },
+      "price": 79.99,
+      "warranty": "2 years",
+      "image_path": "assets/wall_light.jpg"
+    }
+  ]
+}
